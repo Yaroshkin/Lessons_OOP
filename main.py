@@ -29,14 +29,14 @@ class TelegramBot:
         await message.answer("Привет, нажми на кнопку:", reply_markup=self.get_main_keyboard())
 
     def get_main_keyboard(self):
-        self.keyboard.add_button("Ссылка 1",url="https://t.me/chanmusic12")
+        self.keyboard.add_button("Ссылка 1",url="")
         self.keyboard.add_button("Ссылка 2", "btn_2")
         return self.keyboard.get_keyboard()
 
     async def button_handler(self, callback_query: CallbackQuery):
         callback_data = callback_query.data
         if callback_data == "btn_1":
-            await callback_query.message.answer( "https://t.me/vilkedrin")
+            await callback_query.message.answer( "")
         elif callback_data == "btn_2":
             await callback_query.message.answer("Вы нажали кнопку 2!")
 
